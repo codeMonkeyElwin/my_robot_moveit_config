@@ -1,0 +1,14 @@
+controller_list:
+  - name: fake_3R_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_base_link_to_link_1
+      - joint_link_2_to_link_1
+      - joint_link_2_to_gripper
+  - name: fake_hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_link_2_to_gripper
+initial:  # Define initial robot poses per group
+  - group: 3R
+    pose: default
